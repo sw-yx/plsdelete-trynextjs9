@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "next": "^9.0.0",
+    "next-aws-lambda": "^2.0.5-alpha.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-ssr-prepass": "^1.0.5",
+    "styled-components": "^4.3.2"
+  },
+  "name": "trynextjs9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "sw-yx <swyx@dontemail.me>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build:next": "yarn next build",
+    "build": "yarn build:next && cp -a public/_next/serverless/pages src/functions/",
+    "serve": "netlify-lambda serve src/functions",
+    "cpbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/ && netlify-lambda build src/functions",
+    "start": "next start",
+    "oldbuild": "next build",
+    "oldserve": "netlify-lambda serve .next/serverless/pages"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.1",
+    "@types/react": "^16.8.23",
+    "express": "^4.17.1",
+    "jimp": "^0.6.4",
+    "netlify-lambda": "^1.5.0",
+    "netlify-nextjs": "^0.0.3",
+    "serverless-http": "^2.0.2",
+    "typescript": "^3.5.3"
+  }
+}
