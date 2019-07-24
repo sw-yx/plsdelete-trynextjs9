@@ -3,9 +3,11 @@
     "axios": "^0.19.0",
     "next": "^9.0.0",
     "next-aws-lambda": "^2.0.5-alpha.0",
+    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ssr-prepass": "^1.0.5",
+    "stream": "^0.0.2",
     "styled-components": "^4.3.2"
   },
   "name": "trynextjs9",
@@ -14,14 +16,13 @@
   "author": "sw-yx <swyx@dontemail.me>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build:next": "yarn next build",
-    "build": "yarn build:next && cp -a public/_next/serverless/pages src/functions/",
-    "serve": "netlify-lambda serve src/functions",
-    "cpbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/ && netlify-lambda build src/functions",
-    "start": "next start",
-    "oldbuild": "next build",
-    "oldserve": "netlify-lambda serve .next/serverless/pages"
+    "build": "netlify-next build",
+    "olddev": "next",
+    "oldbuild:next": "next build",
+    "oldbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/",
+    "oldserve": "netlify-lambda serve src/functions",
+    "oldcpbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/ && netlify-lambda build src/functions",
+    "oldstart": "next start"
   },
   "devDependencies": {
     "@types/node": "^12.6.1",
@@ -29,7 +30,7 @@
     "express": "^4.17.1",
     "jimp": "^0.6.4",
     "netlify-lambda": "^1.5.0",
-    "netlify-nextjs": "^0.0.3",
+    "netlify-nextjs": "^0.0.6",
     "serverless-http": "^2.0.2",
     "typescript": "^3.5.3"
   }

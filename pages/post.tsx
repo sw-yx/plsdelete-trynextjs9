@@ -36,7 +36,9 @@ Post.getInitialProps = async (props) => {
   console.log("[renderApp]", props.asPath, props.query, props.req && props.req.query.id)
   const id = props.req ? props.req.query.id : props.query.id
 
-  const { data } = await axios.get(`https://netlify-json-api.netlify.com/posts/${id}`)
+  const { data } = await axios
+    .get(`https://netlify-json-api.netlify.com/posts/${id || 1}`)
+    .catch((err) => ({ title: "error", description: "errorrrr" } as any))
 
   return { post: data }
 }

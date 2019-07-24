@@ -12,7 +12,8 @@ const Home: Type = ({ posts }) => {
       </Head>
       {posts.map((post) => (
         <div key={post.id}>
-          <Link href={`/post?id=${post.id}`} as={`/posts/${post.id}`} passHref>
+          {/* <Link href={`/post?id=${post.id}`} as={`/posts/${post.id}`} passHref> */}
+          <Link href={`/post?id=${post.id}`} passHref>
             <a>{post.title}</a>
           </Link>
         </div>
