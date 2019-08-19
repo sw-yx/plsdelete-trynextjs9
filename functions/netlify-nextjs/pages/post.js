@@ -3874,7 +3874,7 @@ function () {
         buildManifest: build_manifest,
         reactLoadableManifest: react_loadable_manifest,
         canonicalBase: "",
-        buildId: "2poR8TgvwJUf4nWbfUvyd",
+        buildId: "pfs8ewR2qwAsG_V7wtmuH",
         dynamicBuildId: false,
         assetPrefix: "",
         ampBindInitData: false

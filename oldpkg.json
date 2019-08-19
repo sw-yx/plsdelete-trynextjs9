@@ -20,6 +20,8 @@
     "olddev": "next",
     "oldbuild:next": "next build",
     "oldbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/",
+    "oldserve": "netlify-lambda serve src/functions",
+    "oldcpbuild": "yarn build:next && cp -a public/_next/serverless/pages src/functions/ && netlify-lambda build src/functions",
     "oldstart": "next start"
   },
   "devDependencies": {
